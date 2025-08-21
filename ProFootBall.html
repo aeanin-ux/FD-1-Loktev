@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Футбола - Главная</title>
+    <style>
+        /* Сброс стилей и базовые настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* Контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Заголовок */
+        .main-title {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .main-title h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Секции */
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /* Сетка контента */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Турнирная таблица */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .table th,
+        .table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background: #34495e;
+            color: white;
+        }
+
+        .table tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Футер */
+        footer {
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .main-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚽ FOOTBALL</div>
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Турниры</a></li>
+                        <li><a href="#">Команды</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Заголовок -->
+    <div class="main-title">
+        <div class="container">
+            <h2>ФУТБОЛ</h2>
+            <p>Страсть. Эмоции. Победа.</p>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Секция о футболе -->
+        <section class="section">
+            <h2 class="section-title">О футболе</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=История+Футбола" alt="История футбола">
+                    <h3>История</h3>
+                    <p>Футбол - самый популярный вид спорта в мире с богатой историей, уходящей корнями в древние времена.</p>
+                    <a href="#" class="btn">Узнать больше</a>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=Правила+Игры" alt="Правила игры">
+                    <h3>Правила</h3>
+                    <p>Современные правила футбола были установлены в 1863 году. Основные принципы остаются неизменными.</p>
+                    <a href="#" class="btn">Читать правила</a>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=Тактика+и+Стратегия" alt="Тактика">
+                    <h3>Тактика</h3>
+                    <p>От классического 4-4-2 до современных схем - тактика постоянно развивается.</p>
+                    <a href="#" class="btn">Изучить тактики</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Турнирная таблица -->
+        <section class="section">
+            <h2 class="section-title">Турнирная таблица</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Команда</th>
+                        <th>И</th>
+                        <th>В</th>
+                        <th>Н</th>
+                        <th>П</th>
+                        <th>О</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Реал Мадрид</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Барселона</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Бавария</td>
+                        <td>10</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Последние новости -->
+        <section class="section">
+            <h2 class="section-title">Последние новости</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=Новый+Рекорд" alt="Новый рекорд">
+                    <h3>Установлен новый рекорд</h3>
+                    <p>Игрок установил новый рекорд по количеству голов в сезоне.</p>
+                    <a href="#" class="btn">Читать</a>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=Трансферы" alt="Трансферы">
+                    <h3>Зимние трансферы</h3>
+                    <p>Обзор главных трансферов зимнего трансферного окна.</p>
+                    <a href="#" class="btn">Читать</a>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200?text=Матч+Дня" alt="Матч дня">
+                    <h3>Матч дня</h3>
+                    <p>Анализ предстоящего главного матча недели.</p>
+                    <a href="#" class="btn">Читать</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Мир Футбола. Все права защищены.</p>
+            <p>Сайт создан для настоящих любителей футбола</p>
+        </div>
+    </footer>
+</body>
+</html>
