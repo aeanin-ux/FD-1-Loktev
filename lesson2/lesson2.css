@@ -1,0 +1,28 @@
+svg {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+#svg_7:hover {
+    fill: #ff0000 !important;
+}
+
+#svg_2:hover {
+    fill: #0000ff !important;
+}
+
+#svg_10:hover {
+    transform: scale(0.5);
+    transform-origin: center;
+}
+
+#svg_8:hover {
+    stroke: #000000 !important;
+    stroke-width: 5px !important;
+}
+
+#svg_1:hover {
+    stroke: #ff0000 !important;
+    stroke-width: 10px !important;
+}
